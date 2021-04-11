@@ -22,9 +22,16 @@ from keras.models import clone_model, Model
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 # custom Fuzzy Layers
-from .FuzzyNetwork import FuzzyNetwork
-from .layers import FuzzyLayer, NormalizedLayer, WeightedLayer, OutputLayer
-
+#from .FuzzyNetwork import FuzzyNetwork
+#from .layers import FuzzyLayer, NormalizedLayer, WeightedLayer, OutputLayer
+import sys
+sys.path.append('/content/sofenn/sofenn/layers')
+sys.path.append('/content/sofenn/sofenn')
+from FuzzyLayer import FuzzyLayer
+from NormalizeLayer import NormalizedLayer
+from WeightedLayer import WeightedLayer
+from OutputLayer import OutputLayer
+from FuzzyNetwork import FuzzyNetwork
 
 class SelfOrganizer(object):
     """

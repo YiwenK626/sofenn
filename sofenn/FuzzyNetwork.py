@@ -25,7 +25,14 @@ from keras.utils import to_categorical
 from sklearn.metrics import mean_absolute_error
 
 # custom Fuzzy Layers
-from .layers import FuzzyLayer, NormalizedLayer, WeightedLayer, OutputLayer
+#from .layers 
+import sys
+sys.path.append('/content/sofenn/sofenn/layers')
+
+from FuzzyLayer import FuzzyLayer 
+from NormalizeLayer import NormalizedLayer
+from WeightedLayer import WeightedLayer
+from OutputLayer import OutputLayer
 
 
 class FuzzyNetwork(object):
